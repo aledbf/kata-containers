@@ -153,7 +153,7 @@ assets:
   kernel:
     description: "Linux kernel optimised for virtual machines"
     url: "https://cdn.kernel.org/pub/linux/kernel/v5.x/"
-    version: "v5.19.2"
+    version: "v5.19.6"
     tdx:
       description: "Linux kernel that supports TDX"
       url: "https://github.com/intel/linux-kernel-dcp/archive/refs/tags"
@@ -161,7 +161,7 @@ assets:
     sev:
       description: "Linux kernel that supports SEV"
       url: "https://cdn.kernel.org/pub/linux/kernel/v5.x/"
-      version: "v5.19.2"
+      version: "v5.19.6"
 
   kernel-experimental:
     description: "Linux kernel with virtio-fs support"

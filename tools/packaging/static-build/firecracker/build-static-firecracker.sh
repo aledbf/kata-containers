@@ -31,6 +31,8 @@ fi
 
 info "Build ${firecracker_repo} version: ${firecracker_version}"
 
+git config --global --add safe.directory "*"
+
 [ -d "${firecracker_dir}" ] || git clone ${firecracker_repo}
 cd "${firecracker_dir}"
 git fetch
