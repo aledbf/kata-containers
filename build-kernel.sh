@@ -4,7 +4,6 @@ set -x
 
 set -eo pipefail
 
-DISTRO=ubuntu
 KERNEL=5.19.6
 
 # extracted from build-kernel.sh
@@ -34,7 +33,7 @@ KERNEL_MODULES_DIR="${script_dir}/tools/packaging/kernel/kata-linux-${KERNEL}-${
 
 echo "Generating assets"
 
-DIST="${script_dir}/dist/${DISTRO}-${KERNEL}"
+DIST="${script_dir}/dist/${KERNEL}"
 mkdir -p "${DIST}"
 
 cp /usr/share/kata-containers/config-${KERNEL} "${DIST}/config-${KERNEL}-${KERNEL_CONFIG_VERSION}"

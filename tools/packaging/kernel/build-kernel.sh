@@ -44,7 +44,7 @@ force_setup_generate_config="false"
 #GPU kernel support
 gpu_vendor=""
 #Confidential guest type
-conf_guest="sev"
+conf_guest=""
 #
 patches_path=""
 #
@@ -133,7 +133,7 @@ get_tee_kernel() {
 	# Depending on where we're getting the terball from it may have a
 	# different name, such as linux-${version}.tar.gz or simply
 	# ${version}.tar.gz.  Let's try both before failing.
-	curl --fail -OL "${kernel_url}/linux-${kernel_tarball}" || curl --fail -OL "${kernel_url}/${kernel_tarball}"
+	curl --fail -o ${kernel_tarball} -sSL "${kernel_url}/linux-${kernel_tarball}" || curl --fail -o ${kernel_tarball} -sSL "${kernel_url}/${kernel_tarball}"
 
 	mkdir -p ${kernel_path}
 	tar --strip-components=1 -xf ${kernel_tarball} -C ${kernel_path}
