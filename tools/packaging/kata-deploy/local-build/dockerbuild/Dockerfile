@@ -8,7 +8,6 @@ ENV INSTALL_IN_GOPATH=false
 
 COPY install_yq.sh /usr/bin/install_yq.sh
 
-
 # Install yq and docker
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \

@@ -44,7 +44,7 @@ force_setup_generate_config="false"
 #GPU kernel support
 gpu_vendor=""
 #Confidential guest type
-conf_guest=""
+conf_guest="sev"
 #
 patches_path=""
 #
